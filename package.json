@@ -1,0 +1,29 @@
+{
+  "name": "impira-uat",
+  "version": "1.0.0",
+  "description": "Automated Test cafe scripting",
+  "main": "index.js",
+  "scripts": {
+    "test:chrome:full": "testcafe chrome '--start-fullscreen' ./tests",
+    "test:chrome:flow": "testcafe chrome ./flow --reporter html:reports/Test_Flow_Regression.html",
+    "test:chrome": "testcafe chrome ./tests --reporter html:reports/Test_UAT_Regression.html",
+    "test:chrome:videos": "testcafe chrome ./tests --video ./videos --video-options singleFile=true,failedOnly=true",
+    "test:chrome:5": "testcafe -c 5 chrome ./tests --reporter html:reports/Test_UAT_Regression_Parallel_Chrome.html",
+    "test:chrome:headless": "testcafe chrome:headless ./tests -q --reporter html:reports/Test_UAT_Regression_Chrome_Headless.html",
+    "test:chrome:mobile": "testcafe 'chrome:emulation:device=iphone X' ./tests",
+    "test:firefox": "testcafe firefox ./tests --reporter html:reports/Test_UAT_Regression_Firefox.html",
+    "test:firefox:headless": "testcafe firefox:headless ./tests -q --reporter html:reports/Test_UAT_Regression_Firefox_Headless.html",
+    "test:opera": "testcafe opera ./tests --reporter html:reports/Test_UAT_Regression_Opera.html",
+    "test:opera:headless": "testcafe opera:headless ./tests --reporter html:reports/Test_UAT_Regression_Opera_Headless.html",
+    "test:safari": "testcafe safari ./tests --reporter html:reports/Test_UAT_Regression_Safari.html",
+    "test:multiple": "testcafe chrome,firefox,chrome:emulation:device=iphone X,safari ./tests",
+    "test:multiple:headless": "testcafe chrome:headless,firefox:headless ./tests -q --reporter html:reports/Test_UAT_Regression_Multi-Headeless.html"
+  },
+  "author": "enrique dcss",
+  "license": "ISC",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.18",
+    "testcafe": "^1.2.1",
+    "testcafe-reporter-html": "^1.4.4"
+  }
+}

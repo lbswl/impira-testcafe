@@ -1,0 +1,4 @@
+{
+    "screenshotPath": "./screenshots",
+    "takeScreenshotsOnFails": true
+}
