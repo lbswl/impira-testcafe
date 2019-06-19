@@ -2,6 +2,7 @@ import { Selector, t } from 'testcafe'
 
 class SearchGoop {
     constructor() {
+        //SearchBar    
         this.searchBar = Selector('.SearchBar')
         this.searchDropdown = Selector('.SearchBar-dropdownButton')
         this.saveSearch = Selector('.SearchBar-saveSearchButton')
@@ -10,17 +11,23 @@ class SearchGoop {
         this.saveButton = Selector('.is-normal')
         this.cancelButton = Selector('.is-cancel')
         this.itemCount = Selector('.PageBar-info div')
+        this.savedSearch = Selector('#search-filter-saved-searches')
+        this.lastSavedSearch = Selector('.open li:nth-last-child(1)')
+        this.deleteButton = Selector('.DeleteSavedSearchMutationIcon-deleteIcon-svg')
+        //Sort
         this.sortIcon = Selector('.SortDropdown-arrowIcon-svg')
         this.sortDropdown = Selector('#SortDropdown')
+        //Asset View
         this.assetViewIcon = Selector('a:nth-child(1) > .SideNav-link .SVGInline-svg')
         this.oneSelection = Selector('.AssetCard:nth-of-type(1) .AssetCard-wrapper')
         this.galleryViewIcon = Selector('.GalleryViewer-controls-icon')
         this.galleryViewPrev = Selector('.GalleryViewer-previous')
         this.galleryViewNext = Selector('.GalleryViewer-next')
-        this.savedSearch = Selector('#search-filter-saved-searches')
-        this.lastSavedSearch = Selector('.open li:nth-last-child(1)')
-        this.deleteButton = Selector('.DeleteSavedSearchMutationIcon-deleteIcon-svg')
-        //.is-paddedRight 
+        //Videos
+        this.videoBtn = Selector(`[aria-label='play']`)
+        this.sceneCuts = Selector('.TimelineEvent-label')
+
+
 
     }
 

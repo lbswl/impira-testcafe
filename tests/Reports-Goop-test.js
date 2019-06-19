@@ -7,12 +7,12 @@ const loginAction = new LoginAction()
 const reportsGoop = new ReportsGoop()
 
 fixture`Reports`
-.page`https://staging.impira.com/`
+.page`${config.baseUrl}`
 
 test("Should check Reports in Goop webpage", async t => {
     loginAction.login()
     loginAction.loginForm(`${config.user}`, `${config.pass}`)
-    await t.navigateTo('https://staging.impira.com/o/Goop/search')
+    await t.navigateTo(`${config.goopUrl}`)
     await reportsGoop.goToReports()
     //Assertions
     await t.expect(reportsGoop.reportTitle).ok()
@@ -21,7 +21,7 @@ test("Should check Reports in Goop webpage", async t => {
 test("Should validate Details in Reports for Goop webpage", async t => {
     loginAction.login()
     loginAction.loginForm(`${config.user}`, `${config.pass}`)
-    await t.navigateTo('https://staging.impira.com/o/Goop/search')
+    await t.navigateTo(`${config.goopUrl}`)
     await reportsGoop.goToReports()
     await reportsGoop.goToReportDetail()
     //Assertions

@@ -7,7 +7,7 @@ const loginAction = new LoginAction()
 const collectionPage = new Collectionpage()
 
 fixture`Collections`
-.page`https://staging.impira.com/`
+.page`${config.baseUrl}`
 
 test("Should create Collection in Impira webpage and Share as Viewer", async t => {
     loginAction.login()
@@ -27,7 +27,7 @@ test("Should create Collection in Impira webpage and Share as Editor", async t =
     await t.expect(collectionPage.incollectionDrop.exists).ok()
     await collectionPage.goToDelete()
 })
-test("Should Collection in Impira webpage, Share as Viewer and Remove Share Collection", async t => {
+test("Should validate Collection in Impira webpage, Share as Viewer and Remove Share Collection", async t => {
     loginAction.login()
     loginAction.loginForm(`${config.user}`, `${config.pass}`)
     await collectionPage.goToCreateCollections("Automated Collection3")

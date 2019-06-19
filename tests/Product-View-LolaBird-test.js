@@ -7,7 +7,7 @@ const loginAction = new LoginAction()
 const productLola = new ProductLola()
 
 fixture`Product View`
-.page`https://staging.impira.com/`
+.page`${config.baseUrl}`
 
 test("Should check Product View in Lola&Bird webpage", async t => {
     loginAction.login()

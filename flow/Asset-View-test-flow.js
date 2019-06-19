@@ -17,4 +17,21 @@ test("Should validate Asset View Stitch Fix Mutable fields", async t => {
     //Assertions
     await t.expect(assetViewpage.usageTitle.exists).ok()
 })
+test("Should validate Asset View Stitch Fix Zoom and Magnify", async t => {
+    loginAction.login()
+    loginAction.loginForm(`${config.user}`, `${config.pass}`)
+    await t.navigateTo('https://staging.impira.com/o/Stitch%20Fix/search')
+    await assetViewpage.goToZoomAndMagnify()
+    //Assertions
+    await t.expect(assetViewpage.zoomBtn.exists).ok()
+})
+test("Should validate Collection in Stitch Fix", async t => {
+    loginAction.login()
+    loginAction.loginForm(`${config.user}`, `${config.pass}`)
+    await t.navigateTo('https://staging.impira.com/o/Stitch%20Fix/search')
+    await assetViewpage.goToCollection()
+    //Assertions
+    await t.expect(assetViewpage.incollectionDrop.exists).ok()
+    await assetViewpage.goToDelete()
+})
 

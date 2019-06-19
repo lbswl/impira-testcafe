@@ -2,7 +2,7 @@ import { Selector, t } from 'testcafe'
 
 class BulkAction {
     constructor() {
-        this.oneSelection = Selector('.AssetCard:nth-of-type(1) .AssetCard-wrapper')
+        this.oneSelection = Selector('.AssetCard:nth-of-type(11) .AssetCard-wrapper')
         this.oneContent = Selector ('.AssetCard:nth-child(1) .AssetCard-link > div:nth-child(1)')
         this.oneClick = Selector('.AssetCard:nth-of-type(1) .AssetCard-selectIcon') 
         this.clear = Selector('.AssetBrowserPageBar-clearBulkSelect')
