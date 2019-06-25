@@ -46,3 +46,11 @@ test("Should Rename Collection in Impira webpage", async t => {
     await t.expect(collectionPage.titlename.innerText).eql('New_rename_test12345')
     await collectionPage.goToDelete()
 })
+test("Should create Collection in Impira webpage from asset view", async t => {
+    loginAction.login()
+    loginAction.loginForm(`${config.user}`, `${config.pass}`)
+    await collectionPage.goToCreateCollectionAsset("Automated Collection5")
+    //Assertions
+    await t.expect(collectionPage.incollectionDrop.exists).ok()
+    await collectionPage.goToDelete()
+})

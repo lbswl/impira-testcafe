@@ -14,7 +14,7 @@ class Collectionpage {
         this.delete = Selector('li:nth-child(4) .AssetBrowserPageBar-titleMenuItem')
         this.arrowAddUsers = Selector('.Select-arrow-zone')
         this.selectDropDown = Selector('.Select-menu-outer')
-        this.selectShareModal = Selector('.CollectionGrant:nth-of-type(2) .DropdownInput-titleTextRight')
+        this.selectShareModal = Selector('.CollectionGrant:nth-of-type(2) .DropdownInput-title')
         this.removeSelector = Selector(`[aria-labelledby='All'] [role='presentation']:nth-of-type(4)`)
         this.Button = Selector('.Button.is-normal')
         this.shareAssertNotification = Selector('.is-interactive > .is-gray-60-svg')
@@ -22,12 +22,25 @@ class Collectionpage {
         this.dropDownViewer = Selector('.DropdownInput-centered-items')
         this.editorOption = Selector(`[aria-labelledby='ShareCollectionForm-dropdown'] [role='presentation']:nth-of-type(1) .DropdownInput-key`)
         //Rename
-        this.rename = Selector('li:nth-child(5) .AssetBrowserPageBar-titleMenuItem')
+        this.rename = Selector('li:nth-child(4) .AssetBrowserPageBar-titleMenuItem')
         this.inputRename = Selector(`[class='TextInput-box is-gray-80'] [type]`)
         this.titlename = Selector('.AssetBrowserPageBar-resultSetTitle')
+        //Create Collection from Asset
+        this.oneSelection = Selector('.AssetCard:nth-of-type(4) .AssetCard-wrapper')
+        this.collectionIconAsset = Selector('.PageBar-ActionIcon:nth-child(2) .SVGInline-svg')
+        this.plusIcon = Selector(`[aria-label='plus'] svg`)
+
     
     }
-    async goToCreateCollections(name){
+    async goToCreateCollectionAsset(name){
+        await t.hover(this.oneSelection)
+                .click(this.oneSelection)
+        await t.click(this.plusIcon)
+        await t.typeText(this.collectionName, name)
+                .click(this.createButton)
+                .click(this.notificationLink)
+    }
+    async goToCreateCollection(name){
         await t.hover(this.collectionIcon)
                 .click(this.collectionIcon)
         await t.click(this.collectionDropdown)
@@ -35,7 +48,6 @@ class Collectionpage {
         await t.typeText(this.collectionName, name)
                 .click(this.createButton)
                 .click(this.notificationLink)
-
     }
 
     async goToShareViewer(){
