@@ -22,7 +22,7 @@ class Collectionpage {
         this.dropDownViewer = Selector('.DropdownInput-centered-items')
         this.editorOption = Selector(`[aria-labelledby='ShareCollectionForm-dropdown'] [role='presentation']:nth-of-type(1) .DropdownInput-key`)
         //Rename
-        this.rename = Selector('li:nth-child(4) .AssetBrowserPageBar-titleMenuItem')
+        this.rename = Selector('li:nth-child(5) .AssetBrowserPageBar-titleMenuItem')
         this.inputRename = Selector(`[class='TextInput-box is-gray-80'] [type]`)
         this.titlename = Selector('.AssetBrowserPageBar-resultSetTitle')
         this.radioBtnDelete0 = Selector(`[for='DeleteCollection-RadioInput-radio-0']`)
@@ -36,6 +36,7 @@ class Collectionpage {
     async goToCreateCollectionAsset(name){
         await t.hover(this.oneSelection)
                 .click(this.oneSelection)
+        await t.click(this.collectionIconAsset)        
         await t.click(this.plusIcon)
         await t.typeText(this.collectionName, name)
                 .click(this.createButton)
