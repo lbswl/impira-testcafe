@@ -13,13 +13,13 @@ Search Goop
 
 Every single test for Impira is located in /tests foler
 
-#Launch test
+# Launch test
 
 npm run test:chrome
 
 npm run test:firefox
 
-#Install Docker and Download TestCafe Image
+# Install Docker and Download TestCafe Image
 
 To learn how to install Docker on your system, see https://docs.docker.com/install/.
 
@@ -32,5 +32,5 @@ The command above installs a stable version of the image. If you need an alpha v
 docker pull testcafe/testcafe:alpha
 
 
-#Launch test using docker image testcafe/testcafe
+# Launch test using docker image testcafe/testcafe
 docker run --rm -it -v ${TEST_FOLDER}:/tests -p 1337:1337 testcafe/testcafe 'chromium:headless --no-sandbox' '/tests/**/*.test.js'
