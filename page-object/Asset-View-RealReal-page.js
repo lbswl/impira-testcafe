@@ -4,8 +4,8 @@ class AssetViewRealpage {
     constructor() {
         this.oneSelection = Selector('.AssetCard:nth-of-type(4) .AssetCard-wrapper')
         //Asset Tags    
-        this.keywordButton = Selector('#react-tabs-10 .SVGInline-svg')
-        this.infoButton = Selector('#react-tabs-8 .SVGInline-svg')
+        this.keywordButton = Selector('#react-tabs-2')
+        this.infoButton = Selector('#react-tabs-0')
         //Mutable Fields
         this.infoEditBtn = Selector('.MutableTextInput-icons')
         this.tagEditBtn = Selector('.EditButtons')
@@ -24,7 +24,7 @@ class AssetViewRealpage {
         this.incollectionDrop = Selector('.DropdownInput-title')
         this.delete = Selector('li:nth-child(4) .AssetBrowserPageBar-titleMenuItem')
         this.button = Selector('.Button.is-normal')
-        //
+        //#react-tabs-0 .SVGInline-svg
 
     
     }

@@ -16,6 +16,7 @@
     "test:opera": "testcafe opera ./tests --reporter html:reports/Test_UAT_Regression_Opera.html",
     "test:opera:headless": "testcafe opera:headless ./tests --reporter html:reports/Test_UAT_Regression_Opera.html",
     "test:safari": "testcafe safari ./tests -q --reporter html:reports/Test_UAT_Regression_Safari.html",
+    "test:safari:flow": "testcafe chrome ./flow -q --reporter html:reports/Test_Flow_Regression.html",
     "test:multiple": "testcafe chrome,firefox,chrome:emulation:device=iphone X,safari ./tests",
     "test:multiple:headless": "testcafe chrome:headless,firefox:headless ./tests -q --reporter html:reports/Test_UAT_Regression_Multi-Headeless.html"
   },

@@ -25,6 +25,7 @@ class Collectionpage {
         this.rename = Selector('li:nth-child(4) .AssetBrowserPageBar-titleMenuItem')
         this.inputRename = Selector(`[class='TextInput-box is-gray-80'] [type]`)
         this.titlename = Selector('.AssetBrowserPageBar-resultSetTitle')
+        this.radioBtnDelete0 = Selector(`[for='DeleteCollection-RadioInput-radio-0']`)
         //Create Collection from Asset
         this.oneSelection = Selector('.AssetCard:nth-of-type(4) .AssetCard-wrapper')
         this.collectionIconAsset = Selector('.PageBar-ActionIcon:nth-child(2) .SVGInline-svg')
@@ -84,6 +85,13 @@ class Collectionpage {
                 .click(this.incollectionDrop)
         await t.click(this.delete)
         await t.click(this.radioBtnDelete)
+                .click(this.Button)
+    }
+    async goToDelete0(){
+        await t.hover(this.incollectionDrop)
+                .click(this.incollectionDrop)
+        await t.click(this.delete)
+        await t.click(this.radioBtnDelete0)
                 .click(this.Button)
     }
 

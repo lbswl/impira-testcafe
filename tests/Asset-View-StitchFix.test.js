@@ -34,4 +34,12 @@ test("Should validate Collection in Stitch Fix", async t => {
     await t.expect(assetViewpage.incollectionDrop.exists).ok()
     await assetViewpage.goToDelete()
 })
+test("Should validate scroll in Stitch Fix", async t => {
+    loginAction.login()
+    loginAction.loginForm(`${config.user}`, `${config.pass}`)
+    await t.navigateTo('https://staging.impira.com/o/Stitch%20Fix/search')
+    await assetViewpage.goToAssetX()
+    //Assertions
+    await t.expect(assetViewpage.secondSelection.exists).notOk()
+})
 

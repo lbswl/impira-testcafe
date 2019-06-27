@@ -9,7 +9,7 @@ const assetViewRealpage = new AssetViewRealpage()
 fixture`Asset View Real Real`
 .page`${config.baseUrl}`
 
-test("Should validate Asset View Stitch Fix Mutable fields", async t => {
+test("Should validate Asset View Real Real Mutable fields", async t => {
     loginAction.login()
     loginAction.loginForm(`${config.user}`, `${config.pass}`)
     await t.navigateTo('https://staging.impira.com/o/The%20RealReal/search')

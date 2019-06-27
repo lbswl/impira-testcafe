@@ -9,10 +9,10 @@ class AssetViewpage {
         this.usageRightButton = Selector('#react-tabs-6 .SVGInline-svg')
         //Mutable Fields
         this.infoEditBtn = Selector('.MutableTextInput-icons')
-        this.tagEditBtn = Selector('.EditButtons')
+        this.tagEditBtnIPTC = Selector('.IPTCTags.TitleAndValueDisplay-narrowTitle')
         this.versionTitle = Selector('.AssetDetailHistoryPanel-title')
         this.newCollection = Selector('.AssetBrowserPageBar-titleMenuItem')
-        this.usageTitle = Selector('.UsageWindowsManager-title')
+        this.usageTitle = Selector('.UsageWindowsManager-UsageWindow:nth-child(2) .UsageWindowEditButton .SVGInline-svg') 
         // Zoom and Magnify Glass
         this.zoomBtn = Selector(`[aria-label='zoom-in'] svg`)
         this.magnifyBtn = Selector(`[aria-label='magnify']`)
@@ -27,8 +27,8 @@ class AssetViewpage {
         this.incollectionDrop = Selector('.DropdownInput-title')
         this.delete = Selector('li:nth-child(4) .AssetBrowserPageBar-titleMenuItem')
         this.button = Selector('.Button.is-normal')
-        //https://staging.impira.com/o/Stitch%20Fix
-        //
+        //Scroll down
+        this.secondSelection = Selector('.AssetCard:nth-of-type(25) .AssetCard-wrapper')
     
     }
     async goToAsset(){
@@ -37,6 +37,10 @@ class AssetViewpage {
         await t.click(this.tagButton)
         await t.click(this.versionButton)
         await t.click(this.usageRightButton)
+    }
+    async goToAssetX(){
+        await t.hover(this.secondSelection)
+        await t.click(this.secondSelection)
     }
     async goToZoomAndMagnify(){
         await t.hover(this.oneSelection)

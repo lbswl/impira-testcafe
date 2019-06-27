@@ -2,8 +2,8 @@ import { Selector, t } from 'testcafe'
 
 class BulkGoopUsage {
     constructor() {
-        this.oneSelection = Selector('.AssetCard:nth-of-type(9) .AssetCard-wrapper')
-        this.secSelection = Selector('.AssetCard:nth-of-type(8) .AssetCard-wrapper')
+        this.oneSelection = Selector('.AssetCard:nth-of-type(5) .AssetCard-wrapper')
+        this.secSelection = Selector('.AssetCard:nth-of-type(4) .AssetCard-wrapper')
         this.usage = Selector('.AssetDetailSection:nth-of-type(2) .AssetDetailSection-title')
         this.photographerIcon = Selector('.MutableTextInput-icons')
         this.notesIcon = Selector('.MutableTextArea-icons')
