@@ -1,9 +1,12 @@
 import { Selector, t } from 'testcafe'
+import utils from '../lib/utils'
 
 class BulkGoopUsage {
     constructor() {
-        this.oneSelection = Selector('.AssetCard:nth-of-type(5) .AssetCard-wrapper')
-        this.secSelection = Selector('.AssetCard:nth-of-type(4) .AssetCard-wrapper')
+        this.varNum1 = utils.generateNum(1)
+        this.varNum2 = utils.generateNum(1)
+        this.oneSelection = Selector('.AssetCard:nth-of-type('+this.varNum1+') .AssetCard-wrapper')
+        this.secSelection = Selector('.AssetCard:nth-of-type('+this.varNum2+') .AssetCard-wrapper')
         this.usage = Selector('.AssetDetailSection:nth-of-type(2) .AssetDetailSection-title')
         this.photographerIcon = Selector('.MutableTextInput-icons')
         this.notesIcon = Selector('.MutableTextArea-icons')
@@ -16,15 +19,12 @@ class BulkGoopUsage {
     }
 
     async goToUsageExpired(){
-        var today = new Date();
-        var dd = String(today.getDate() - 1).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0');
-        var yyyy = today.getFullYear();
-        today = mm + '/' + dd + '/' + yyyy;
+        var dategen = new Date();
+        dategen = utils.generateTodayDate()
         await t.hover(this.secSelection)
                 .click(this.secSelection)
                 .click(this.expiresInput)
-                .typeText(this.expiresInput, today, {paste:true})
+                .typeText(this.expiresInput, dategen, {paste:true})
                 .hover(this.indicator)
 
     }
