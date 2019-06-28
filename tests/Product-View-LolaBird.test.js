@@ -9,7 +9,7 @@ const productLola = new ProductLola()
 fixture`Product View`
 .page`${config.baseUrl}`
 
-test("Should check Product View in Lola&Bird webpage", async t => {
+test("Should check Product View on Lola&Bird webpage", async t => {
     loginAction.login()
     loginAction.loginForm(`${config.user}`, `${config.pass}`)
     await t.navigateTo('https://staging.impira.com/o/Lola%20+%20Bird/v/9a30e00efdd63bf2')

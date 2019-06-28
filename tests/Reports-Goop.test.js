@@ -9,7 +9,7 @@ const reportsGoop = new ReportsGoop()
 fixture`Reports`
 .page`${config.baseUrl}`
 
-test("Should check Reports in Goop webpage", async t => {
+test("Should check Reports on Goop webpage", async t => {
     loginAction.login()
     loginAction.loginForm(`${config.user}`, `${config.pass}`)
     await t.navigateTo(`${config.goopUrl}`)

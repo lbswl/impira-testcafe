@@ -10,7 +10,7 @@ const collectionPage = new Collectionpage()
 fixture`Collections`
 .page`${config.baseUrl}`
 
-test("Should create Collection in Impira webpage and Share as Viewer", async t => {
+test("Should create Collection on Impira webpage and Share as Viewer", async t => {
     loginAction.login()
     loginAction.loginForm(`${config.user}`, `${config.pass}`)
     await collectionPage.goToCreateCollection(utils.generateID(10))
@@ -19,7 +19,7 @@ test("Should create Collection in Impira webpage and Share as Viewer", async t =
     await t.expect(collectionPage.incollectionDrop.exists).ok()
     await collectionPage.goToDelete()
 })
-test("Should create Collection in Impira webpage and Share as Editor", async t => {
+test("Should create Collection on Impira webpage and Share as Editor", async t => {
     loginAction.login()
     loginAction.loginForm(`${config.user}`, `${config.pass}`)
     await collectionPage.goToCreateCollection(utils.generateID(10))
@@ -28,7 +28,7 @@ test("Should create Collection in Impira webpage and Share as Editor", async t =
     await t.expect(collectionPage.incollectionDrop.exists).ok()
     await collectionPage.goToDelete()
 })
-test("Should validate Collection in Impira webpage, Share as Viewer and Remove Share Collection", async t => {
+test("Should validate Collection on Impira webpage, Share as Viewer and Remove Share Collection", async t => {
     loginAction.login()
     loginAction.loginForm(`${config.user}`, `${config.pass}`)
     await collectionPage.goToCreateCollection(utils.generateID(10))
@@ -38,7 +38,7 @@ test("Should validate Collection in Impira webpage, Share as Viewer and Remove S
     await t.expect(collectionPage.shareAssertNotification.exists).ok()
     await collectionPage.goToDelete()
 })
-test("Should Rename Collection in Impira webpage", async t => {
+test("Should Rename Collection on Impira webpage", async t => {
     loginAction.login()
     loginAction.loginForm(`${config.user}`, `${config.pass}`)
     await collectionPage.goToCreateCollection(utils.generateID(10))
@@ -47,7 +47,7 @@ test("Should Rename Collection in Impira webpage", async t => {
     await t.expect(collectionPage.titlename.innerText).eql('New_rename_test12345')
     await collectionPage.goToDelete()
 })
-test("Should create Collection in Impira webpage from asset view", async t => {
+test("Should create Collection on Impira webpage from asset view", async t => {
     loginAction.login()
     loginAction.loginForm(`${config.user}`, `${config.pass}`)
     await collectionPage.goToCreateCollectionAsset(utils.generateID(10))

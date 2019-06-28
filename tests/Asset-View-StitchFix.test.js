@@ -25,7 +25,7 @@ test("Should validate Asset View Stitch Fix Zoom and Magnify", async t => {
     //Assertions
     await t.expect(assetViewpage.zoomBtn.exists).ok()
 })
-test("Should validate Collection in Stitch Fix", async t => {
+test("Should validate Collection on Stitch Fix", async t => {
     loginAction.login()
     loginAction.loginForm(`${config.user}`, `${config.pass}`)
     await t.navigateTo('https://staging.impira.com/o/Stitch%20Fix/search')
@@ -34,7 +34,7 @@ test("Should validate Collection in Stitch Fix", async t => {
     await t.expect(assetViewpage.incollectionDrop.exists).ok()
     await assetViewpage.goToDelete()
 })
-test("Should validate scroll in Stitch Fix", async t => {
+test("Should validate scroll on Stitch Fix", async t => {
     loginAction.login()
     loginAction.loginForm(`${config.user}`, `${config.pass}`)
     await t.navigateTo('https://staging.impira.com/o/Stitch%20Fix/search')

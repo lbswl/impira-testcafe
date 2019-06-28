@@ -17,7 +17,7 @@ test("Should validate Asset View Real Real Mutable fields", async t => {
     //Assertions
     await t.expect(assetViewRealpage.tagEditBtn.exists).ok()
 })
-test("Should validate Asset View Stitch Fix Zoom and Magnify", async t => {
+test("Should validate Asset View Real Real Zoom and Magnify", async t => {
     loginAction.login()
     loginAction.loginForm(`${config.user}`, `${config.pass}`)
     await t.navigateTo('https://staging.impira.com/o/The%20RealReal/search')
