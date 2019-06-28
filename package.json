@@ -6,6 +6,7 @@
   "scripts": {
     "test:chrome:full": "testcafe chrome '--start-fullscreen' ./tests",
     "test:chrome:flow": "testcafe chrome ./flow -q --reporter html:reports/Test_Flow_Regression.html",
+    "test:chrome1": "testcafe chrome ./tests",
     "test:chrome": "testcafe chrome ./tests --reporter html:reports/Test_UAT_Regression.html",
     "test:chrome:videos": "testcafe chrome ./tests --video ./videos --video-options singleFile=true,failedOnly=true",
     "test:chrome:5": "testcafe -c 5 chrome ./tests --reporter html:reports/Test_UAT_Regression_Parallel_Chrome.html",
