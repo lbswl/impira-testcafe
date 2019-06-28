@@ -1,3 +1,10 @@
+/*
+Author: Enrique Decoss
+
+@package: page-object
+All elements and methods for Goop asset search page && Asset View page
+*/
+
 import { Selector, t } from 'testcafe'
 import utils from '../lib/utils'
 

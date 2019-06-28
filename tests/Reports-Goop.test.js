@@ -1,3 +1,10 @@
+/*
+Author: Enrique Decoss
+
+@package: tests
+All test for Goop Reports 
+*/
+
 import { Selector, ClientFunction } from 'testcafe'
 import LoginAction from '../page-object/Login-actions-page'
 import ReportsGoop from '../page-object/Reports-Goop-page'

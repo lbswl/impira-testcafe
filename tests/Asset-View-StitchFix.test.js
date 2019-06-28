@@ -1,3 +1,10 @@
+/*
+Author: Enrique Decoss
+
+@package: tests
+All test for Stitch Fix
+*/
+
 import { Selector, ClientFunction } from 'testcafe'
 import LoginAction from '../page-object/Login-actions-page'
 import AssetViewpage from '../page-object/Asset-View-StitchFix-page'

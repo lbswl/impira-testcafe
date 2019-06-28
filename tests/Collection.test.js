@@ -1,3 +1,10 @@
+/*
+Author: Enrique Decoss
+
+@package: tests
+All test for Collections 
+*/
+
 import { Selector, ClientFunction } from 'testcafe'
 import LoginAction from '../page-object/Login-actions-page'
 import Collectionpage from '../page-object/Collection-page'

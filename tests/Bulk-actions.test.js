@@ -1,3 +1,10 @@
+/*
+Author: Enrique Decoss
+
+@package: tests
+All test for Impira 
+*/
+
 import { Selector, ClientFunction } from 'testcafe'
 import LoginAction from '../page-object/Login-actions-page'
 import BulkAction from '../page-object/Bulk-actions-page'

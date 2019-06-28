@@ -1,3 +1,10 @@
+/*
+Author: Enrique Decoss
+
+@package: tests
+All test for RealReal
+*/
+
 import { Selector, ClientFunction } from 'testcafe'
 import LoginAction from '../page-object/Login-actions-page'
 import AssetViewRealpage from '../page-object/Asset-View-RealReal-page'

@@ -1,3 +1,10 @@
+/*
+Author: Enrique Decoss
+
+@package: page-object
+All elements and methods for Goop Search webpage
+*/
+
 import { Selector, t } from 'testcafe'
 
 class SearchGoop {
