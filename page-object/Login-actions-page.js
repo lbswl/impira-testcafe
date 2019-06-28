@@ -1,3 +1,10 @@
+/*
+Author: Enrique Decoss
+
+@package: page-object
+All elements and methods for Login page
+*/
+
 import { Selector, t } from 'testcafe'
 
 class LoginAction {

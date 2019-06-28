@@ -1,3 +1,10 @@
+/*
+Author: Enrique Decoss
+
+@package: page-object
+All elements and methods for RealReal asset search page
+*/
+
 import { Selector, t } from 'testcafe'
 
 class AssetViewRealpage {

@@ -1,3 +1,10 @@
+/*
+Author: Enrique Decoss
+
+@package: page-object
+All elements and methods for Collection actions
+*/
+
 import { Selector, t } from 'testcafe'
 
 class Collectionpage {

@@ -1,3 +1,10 @@
+/*
+Author: Enrique Decoss
+
+@package: page-object
+All elements and methods for Product View Lola Bird webpage
+*/
+
 import { Selector, t } from 'testcafe'
 
 class ProductLola {

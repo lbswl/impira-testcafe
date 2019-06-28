@@ -19,8 +19,6 @@ npm run test:chrome
 
 npm run test:firefox
 
-Running example flow -> npm run test:chrome:flow
-
 # Install Docker and Download TestCafe Image
 
 To learn how to install Docker on your system, see https://docs.docker.com/install/.
