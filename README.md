@@ -1,36 +1,55 @@
 # impira-testcafe
-Test Script for Impira User acceptance Testing
-Covering Following Functionality:
+This repository contains the test script for Impira User acceptance Testing. It covers the following functionality:
 
-Asset View Stitch Fix
-Bulk Action Impira
-Collections
-Product View Lola & Bird
-Reports Goop
-Search Goop
+* Asset View Stitch Fix
+* Bulk Action Impira
+* Collections
+* Product View Lola & Bird
+* Reports Goop
+* Search Goop
 
-# How it works
+## Table of Contents
 
-Every single test for Impira is located in /tests foler
+- [How it works](#how-it-works)
+- [Launch test](#launch-test)
+- [Install Docker and Download TestCafe Image]()
+- [Launch test using docker image testcafe/testcafe]()
 
-# Launch test
+## How it works
 
+Every single test for Impira is located in /tests folder.
+
+## Launch test
+To launch test, run the following commands:
+
+```
 npm run test:chrome
+```
 
+```
 npm run test:firefox
+```
 
-# Install Docker and Download TestCafe Image
+## Install Docker and Download TestCafe Image
 
-To learn how to install Docker on your system, see https://docs.docker.com/install/.
+You need to install Docker on your system. For more information on how to install Docker see [About Docker CE](https://docs.docker.com/install/).
 
-After Docker is installed, download the TestCafe Docker image from the repository.
+After Docker is installed, perform the following steps:
 
-docker pull testcafe/testcafe
+1. Download the TestCafe Docker image from the repository.
+2. Install a stable version of the image with the command:
+   ```
+    docker pull testcafe/testcafe
+   ```
+   **Note:** If you need an alpha version, then run the following command:
 
-The command above installs a stable version of the image. If you need an alpha version, run the following command.
+     ```
+     docker pull testcafe/testcafe:alpha
+     ```
 
-docker pull testcafe/testcafe:alpha
+## Launch test using docker image testcafe/testcafe
+To launch the test using the docker image, run the following command:
 
-
-# Launch test using docker image testcafe/testcafe
+```
 docker run --rm -it -v ${TEST_FOLDER}:/tests -p 1337:1337 testcafe/testcafe 'chromium:headless --no-sandbox' '/tests/**/*.test.js'
+```
